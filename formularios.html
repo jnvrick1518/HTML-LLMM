@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Práctica 2 LLMM HTML: Deportes">
+        <title>Centro de deportes</title>
+    </head>
+    <body style="background-color:#f0f0f0">
+        <h1>Centro Polideportivo "Las leyendas"</h1>
+        <h3>Sistema de Inscripción por Actividades</h3>
+        <p><b>Cada actividad tiene su propio formulario de inscripción con requisitos específicos</b></p>
+        <hr>
+        <table border="2" width="100%" cellpadding="15">
+            <caption><b>INSCRIPCIONES ABIERTAS - TEMPORADA 2026</b></caption>
+            <thead style="background-color:#ff6347">
+                <tr>
+                    <th style="background-color:#ffd700">Horario</td>
+                    <th style="background-color:#87ceeb">Lunes</td>
+                    <th style="background-color:#98fb98">Martes</td>
+                    <th style="background-color:#dda0dd">Miércoles</td>
+                </tr>
+            </thead>
+            <tbody>
+                <td style="background-color: #ffe4b5;"><b>9:30 - 11:00<br>MAÑANA</b></td>
+                <td style="background-color: #e0ffe0;">
+                    <h2>YOGA</h2>
+                    <p><b>Instructor: </b>María Lopez</p>
+                    <form action="" method="post">
+                        <fieldset style="background-color: #f0fff0;">
+                            <legend>Inscripción Yoga</legend>
+                            <label for="nomcom1">Nombre completo: </label>
+                            <input type="text" name="nombrecompleto-yoga" id="nomcom1" minlength="5" required autofocus> <br><br>
+                            <label for="email">Email: </label>
+                            <input type="email" name="email" id="email" required> <br><br>
+                            <label for="edad">Edad: </label>
+                            <input type="number" name="edad" id="edad" required min="16" max="80"> <br><br><br>
+                            <p>Nivel de experiencia:</p>
+                            <input type="radio" name="experiencia" id="principiante" checked value="principiante">
+                            <label for="principiante">Principiante</label> <br>
+                            <input type="radio" name="experiencia" id="intermedio" value="intermedio">
+                            <label for="intermedio">Intermedio</label> <br>
+                            <input type="radio" name="experiencia" id="avanzado" value="avanzado">
+                            <label for="avanzado">Avanzado</label> <br><br>
+                            <input type="checkbox" name="esterilla" id="esterilla" value="si">
+                            <label for="esterilla">Necesito alquilar esterilla (+5€/mes)</label> <br><br>
+                            <input type="submit" value="Inscribirse en Yoga">
+                            <input type="reset" value="Limpiar">
+                        </fieldset> <br>
+                    </form>
+                </td>
+                <td style="background-color: #e0f7fa;">
+                    <h2>NATACIÓN</h2>
+                    <p><b>Instructor: </b>Carlos Ruiz</p>
+                    <form action="inscripcion_natacion.php" method="get">
+                        <fieldset style="background-color: #b2ebf2;">
+                            <legend>Inscripción Natación</legend>
+                            <label for="nomcom1">Nombre: </label>
+                            <input type="text" name="nombre-natacion" id="nom" minlength="3" required tabindex="1"> <br><br>
+                            <label for="telf">Teléfono: </label>
+                            <input type="tel" name="telf" id="telf" required tabindex="2"> <br><br>
+                            <label for="fnam">Fecha de nacimiento:</label>
+                            <input type="date" name="fecha-nacimiento" id="fnam" required tabindex="3"> <br><br>
+                            <label for="estpref">Estilo preferido:</label>
+                            <select name="estilo-preferido" id="estpref" required>
+                                <option value="sivesestoenelbuscadorlahecagado" selected disabled>-- Selecciona estilo --</option>
+                                <option value="crol">Crol</option>
+                                <option value="espalda">Espalda</option>
+                                <option value="braza">Braza</option>
+                                <option value="mariposa">Mariposa</option>
+                                <option value="todos">Todos</option>
+                            </select> <br><br>
+                            <input type="checkbox" name="certificado-medico" id="certmed" required>
+                            <label for="certmed">Tengo certificado médico (OBLIGATORIO)</label> <br>
+                            <p>Observaciones médicas:</p>
+                            <textarea name="observaciones-medicas" id="obmed" rows="2" cols="25" placeholder="Alergias, problemas respiratorios..."></textarea> <br><br>
+                            <input type="submit" value="Inscribirse">
+                        </fieldset> <br>
+                    </form>
+                </td>
+                <td style="background-color: #f3e5f5;">
+                    <h2>PILATES</h2>
+                    <p><b>Instructor: </b>Ana García</p>
+                    <form action="inscripcion_pilates.php" method="post">
+                        <fieldset style="background-color: #e1bee7;">
+                            <legend>Inscrición Pilates</legend>
+                            <label for="nomcom2">Nombre completo: </label>
+                            <input type="text" name="nombrecompleto-pilates" id="nomcom2" maxlength="30" required> <br><br>
+                            <label for="correl">Correo electrónico: </label>
+                            <input type="email" name="correo-electronico" id="correl" required> <br><br>
+                            <label for="socio">Código de socio: </label>
+                            <input type="text" name="codigo-socio" id="socio" readonly value="SOCIO2025"> <br><br><br>
+                            <p>¿Has practicado Pilates antes?</p>
+                            <input type="radio" name="ya-practicado" id="si" value="si">
+                            <label for="si">Sí</label>
+                            <input type="radio" name="ya-practicado" id="no" value="no" checked>
+                            <label for="no">No</label> <br>
+                            <p>Objetivos (puedes marcar varios):</p>
+                            <input type="checkbox" name="flexibilidad" id="flex">
+                            <label for="flex">Mejorar flexibilidad</label> <br>
+                            <input type="checkbox" name="postura" id="post" checked>
+                            <label for="post">Corregir postura</label> <br>
+                            <input type="checkbox" name="musculos" id="musc">
+                            <label for="musc">Tonificar músculos</label> <br><br>
+                            <input type="submit" value="Inscribirse">
+                            <input type="reset" value="Borrar">
+                        </fieldset>
+                    </form>
+                </td>
+            </tbody>
+            <tfoot style="background-color: #4caf50;">
+                <td colspan="4" style="background-color: #66bb6a;"><b>Información general: </b>Todas las actividades incluyen acceso a vestuarios, duchas y taquillas. Descuento del 20% para familias (3 o más miembros). Contacto: 999-123-456 | info@lasleyendas.com</td>
+            </tfoot>
+        </table>
+    </body>
+</html>
